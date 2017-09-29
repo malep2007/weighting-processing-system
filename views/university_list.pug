@@ -1,0 +1,31 @@
+extends layout
+block content
+    
+    div.container-fluid
+        h1 #{title}
+        div.row
+            div.col-sm-2
+                ul.nav.navbar-left
+                    li.nav-item
+                        a.nav-link(href="#") University
+                    li.nav-item
+                        a.nav-link(href="#") Colleges
+                    li.nav-link
+                        a.nav-link(href="#") Departments
+                    hr
+                ul.nav.navbar-left
+                    li.nav-item
+                        a.nav-link(href="/university/create") Create University
+                    li.nav-item
+                        a.nav-link(href="#") Create Colleges
+                    li.nav-link
+                        a.nav-link(href="#")  Create Departments
+
+            div.col-sm-10
+                p Where the main display for university data will be placed
+                ul
+                each university in universities                    
+                    li
+                        a(href=university.url) [#{university.university_name}]
+                else
+                    p.text-danger There are no universities in this system

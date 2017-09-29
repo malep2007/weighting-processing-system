@@ -1,0 +1,15 @@
+extends layout
+
+block content  
+    div.container-fluid
+        h1=title
+        div
+            form(action="/login" method="post")
+                div.form-group
+                    label(for="username") Username:
+                    input.form-control(type="text", name="password") 
+                div.form-group
+                    label(for="password") Password: 
+                    input.form-control(type="text", name="password")                
+
+            button.btn.btn-default(type="submit", value="Login") Login

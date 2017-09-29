@@ -1,0 +1,55 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet' href='../public/stylesheets/css/bootstrap.min.css')
+    script(src="../public/javascripts/js/jquery.min.js")
+    script(src='../public/javascripts/js/bootstrap.min.js')
+    
+    
+  body
+    nav.navbar.navbar-default
+      div.container-fluid
+        div.navbar-header
+          a.navbar-brand(href='/') Weighing Information System
+        ul.nav.navbar-nav
+          li.nav-item.active
+            a.nav-link(href='/') Home #[span.sr-only]
+          li.nav-item
+            a.nav-item(href="/about") About
+          li.nav-item
+            a.nav-link(href="/university") Universities
+          li.nav-item
+            a.nav-link(href="/login") Login
+          li.nav-item
+            a.nav-link(href="/logout") Logout 
+        
+    block content
+
+    footer.container-fluid
+      div
+        p copyright of iLabs@MAK Project, 2017
+
+        
+
+    //- nav.nav.navbar-expand-md.navbar-dark.bg-dark.fixed-top
+    //-   a.navbar-brand(href="/") Weighting Information System
+    //-   button.navbarr-toggler(type="button" data-toggle='collapse' data-target='#navbarsExampleefault' aria-controls='navbarsExampleDefault' aria-expanded='false' aria-label='Toggle navigation')
+    //-     span.navbar-toggler-icon
+      
+    //-   div.collapase.navbar-collapse#navbarExamplesDefault
+    //-     ul.navbar-nav.mr-auto
+    //-       li.nav-item.active
+    //-         a.nav-link(href='/') Home #[span.sr-only] (current)
+    //-       li.nav-item
+    //-         a.nav-item(href="/about") About
+    //-       li.nav-item
+    //-         a(href='/login'(class='nav-link') Login
+    //-       li.nav-item
+    //-         a(href='/logout'(class='nav-link') Logout 
+    //-       form.form-inline.my-2.my-lg-2(action="/search")
+    //-         input.form-control.mr-sm-2(type="text" placeholder='Search' aria-label='Search')
+    //-         button.btn.btn-outline-success.my-2.my-sm-0(type="submit") Search
+    //-   div.container
+    //-     block content
+    
