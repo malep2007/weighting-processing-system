@@ -6,12 +6,12 @@ block content
         div
             form(action="/university/create", method="post")
                 div.form-group
-                    label(for="university name") University Name:
-                    input#university_name.form-control(type="text", name="university_name")
+                    label(for="name") University Name:
+                    input#university_name.form-control(type="text", name="name")
                 div.form-group
                     label(for="location") Location
                     input#location.form-control(type="text", name='location')
                 div.form-group
-                    label(for="web-url") Website URL
+                    label(for="web_url") Website URL
                     input#web_url.form-control(type="text", name='web_url')
                 button.btn.btn-default(type="submit") Save University

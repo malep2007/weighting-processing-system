@@ -22,10 +22,14 @@ block content
                         a.nav-link(href="#")  Create Departments
 
             div.col-sm-10
-                p Where the main display for university data will be placed
+                p Universities Registered on System
                 ul
-                each university in universities                    
-                    li
-                        a(href=university.url) [#{university.university_name}]
+                if(universities)
+                    each university in universities                    
+                        li
+                            a(href=university.url) #{university.university_name}
+                    else
+                        p.text-danger There are no universities in this system
                 else
-                    p.text-danger There are no universities in this system
+                    p There are no objects in the post form that match what you want
+                

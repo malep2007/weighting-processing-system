@@ -3,9 +3,9 @@ var Schema = mongoose.Schema;
 
 
 var UniversitySchema = Schema({
-    university_name: {type: String, require: true},
-    university_location : {type: String},
-    university_url:{type: String}
+    name: {type: String, required: true},
+    location : {type: String, requred: true},
+    web_url:{type: String, required:true}
 });
 
 UniversitySchema.virtual('url').get(function () {

@@ -6,6 +6,8 @@ var universityController = require('../controllers/universitiesController');
 router.get('/university', universityController.get_university_list);
 
 /* GET university_create */
-router.get('/university/create', universityController.create_university_get);
+router.get('/university/create', universityController.get_university_list);
 
+/* POST university_create */
+router.post("/university/create", universityController.create_university_post);
 module.exports = router;
